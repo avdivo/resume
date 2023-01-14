@@ -14,8 +14,4 @@ jQuery(document).ready(function($) {
 	    }
 	}).scroll();
 
-    $('#exit').click(function(){
-        alert('Не, ну вы серьезно думали что я сделаю такую кнопку?')
-    });
-
 });

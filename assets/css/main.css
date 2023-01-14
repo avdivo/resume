@@ -28,6 +28,7 @@ font-family: 'Inter', sans-serif;}
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {background-color: transparent;background-image: none;color:#000;}
 /* 1.2 Typography */
 h1,h2,h3,h4,h5,h6 {font-family: 'Inter', sans-serif;}
+
 figure{ margin: 0 }
 svg,img { max-width: 100%; height: auto; }
 
@@ -60,9 +61,10 @@ svg,img { max-width: 100%; height: auto; }
 /*-----------------------------------------------------------------
   3. >>> About Style
 ----------------------------------------------------------------*/
-.ds-about-section{ padding-top: 60px; padding-bottom: 120px; }
+.ds-about-section{ padding-top: 60px; padding-bottom: 10px; }
 .ds-heading{ display: inline-block; font-weight: 700; color: #000; text-transform: uppercase; letter-spacing: 1px; font-size: 16px; border-bottom: 3px solid #F26464; padding-bottom: 7px; margin-bottom: 23px; }
-.ds-about-section p{ color: #373737; font-size: 24px; line-height: 40px; font-weight: 300; margin-bottom: 60px; }
+.ds-about-section p { color: #373737; font-size: 20px; line-height: 30px; font-weight: 300; margin-bottom: 30px; text-align:justify; }
+.ds-about-section ul{ padding: 0; color: #373737; font-size: 20px; margin-left: 50px; line-height: 30px; font-weight: 300; margin-bottom: 30px; }
 
 .ds-button{ display: inline-block; text-transform: uppercase;font-size: 12px;line-height: 13px;font-weight: 600;letter-spacing: 3px; color:#F26464; padding:17px 30px;  border: 2px solid #F26464;border-radius: 60px; }
 .ds-button:hover{ background-color:#F26464 ; color: #FFF; }
@@ -70,7 +72,7 @@ svg,img { max-width: 100%; height: auto; }
 /*-----------------------------------------------------------------
   4. >>> Skills Style
 ----------------------------------------------------------------*/
-.ds-skills-section{ padding-bottom: 105px; }
+.ds-skills-section{ padding-bottom: 50px; }
 .ds-skills-list{ list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: center; margin-top: 11px; }
 .ds-skills-list li{ display: inline-block; color: #373737; font-size: 16px; padding:10px 20px; background-color: #FFF; border: 1px solid #D7D7D7;
   border-radius: 27px; margin-right: 15px; margin-bottom: 15px;  font-weight: 500;}
@@ -96,7 +98,7 @@ span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-b
 .ds-work-list{ padding-left: 70px; padding-top:40px; padding-right: 70px; background-color:#F6F8FA; margin-bottom: 40px; }
 .ds-work-list section{ padding-top: 20px; padding-right: 120px; }
 .ds-work-tilte{ color: #000; font-size: 30px; line-height: 36px; font-weight: 600; margin-bottom: 30px; }
-.ds-work-list p{ font-weight: 300; font-size: 18px; line-height: 30px; }
+.ds-work-list p{ font-weight: 300; font-size: 18px; line-height: 30px; text-align:justify; }
 .ds-work-list .ds-button{ margin-top: 20px; }
 
 .ds-work-det-hed{ padding-top: 42px; padding-bottom: 80px; }
@@ -137,14 +139,15 @@ span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-b
 	.ds-numbervalulist li{ margin-right: 30px; }
 	.ds-numbervalulist strong{ font-size: 30px; }
 	.ds-numbervalulist span{ font-size: 14px; }
-	.ds-about-section{ padding-bottom: 60px; }
-	.ds-about-section p,.ds-work-content-sec p,.ds-work-content-sec li{ font-size: 15px; line-height: 30px;margin-bottom: 30px; }
+	.ds-about-section{ padding-bottom: 30px; }
+	.ds-about-section p,.ds-work-content-sec p,.ds-work-content-sec li{ font-size: 15px; line-height: 20px;margin-bottom: 20px;text-align:justify; }
+    .ds-about-section ul{ padding: 0; color: #373737; font-size: 15px; margin-left: 50px; font-weight: 300; }
 	.ds-skills-list li{ margin-right: 10px; margin-bottom: 10px; font-size: 14px; }
 	.ds-skills-section .col-12,.ds-experience-list .col-12{ margin-bottom: 40px; }
 	.ds-skills-section,.ds-work-section, .ds-experience-section{ padding-bottom: 0; }
 	.ds-experience-list section{ padding-right: 0; }
 	.ds-work-list{ padding: 30px; }
-	.ds-work-list p{font-size: 15px; line-height: 30px;}
+	.ds-work-list p{font-size: 15px; line-height: 30px; text-align:justify;}
 	.ds-footer{ padding: 60px 10px; }
 	.ds-footer section h4{ font-size: 40px; }
 	.ds-copyright{ font-size: 14px; }

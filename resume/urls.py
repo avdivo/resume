@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from .views import index, save_mess
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name="index"),
+    path('save_mess/', save_mess, name="save_mess"),
 ]

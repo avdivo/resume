@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  resume:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    networks:
+      nginx_net:
+    restart: always
+    ports:
+      - 0.0.0.0:8004:8000
+
+networks:
+  nginx_net:
+    name: nginx_net

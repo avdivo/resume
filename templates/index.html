@@ -1,10 +1,10 @@
-<!doctype html>
+{% load static %}
 <html lang="ru">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
       <!-- Google Fots -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <!-- Main CSS -->
-      <link href="assets/css/main.css" rel="stylesheet">
+      <link href="{% static 'css/main.css' %}" rel="stylesheet">
 
 
     <title>Алексей Крутиков - Python developer</title>
@@ -47,7 +47,7 @@
         <div class="container">
             <div class="ds-header-inner">
               <!-- logo -->
-              <a href="index.html" class="ds-logo">
+              <a href="{% url 'index' %}" class="ds-logo">
                 <span>А</span>Алексей Крутиков (Python developer)
               </a>
               <!-- logo -->
@@ -84,15 +84,24 @@
                                 Каждое приложение (сайт) находится в своем Docker контейнере, а управление трафиком
                                 возложено на обратный прокси-сервер Nginx.</p>
                           <a href="#banner" class="ds-button" id="exit">Обо мне</a>
-                          <a href="Алексей Крутиков python_dev.pdf" download="" class="ds-button">Скачать резюме</a>
+                          <a href="{% static 'Алексей Крутиков python_dev.pdf' %}" download="" class="ds-button">Скачать резюме</a>
                       </section>
                   </div>
                   <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5"><br>
-                      <figure><img src="assets/images/this_1.png"><img src="assets/images/this_2.png">
-                      <img src="assets/images/this_3.png"></figure>
+                      <figure><img src="{% static 'img/this_1.png' %}"><img src="{% static 'img/this_2.png' %}">
+                      <img src="{% static 'img/this_3.png' %}"></figure>
                   </div>
               </div>
             </div>
+
+            <a href="#comment">
+            <div class="alert alert-danger" role="alert">
+                Оставьте комментарий!<br>
+                Если вы специалист, Recruter, HR - уделите пару минут, мне очень важно ваше мнение!
+                Что так или не так с моим резюме, сайтом. Чем вас не устраивает моя кандидатура.
+                Отзывы анонимные, напишите правду.
+            </div>
+            </a>
 
             <!--  Shop -->
             <div class="ds-work-list">
@@ -109,7 +118,7 @@
                       </section>
                   </div>
                   <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5"><br>
-                      <figure><img src="assets/images/p1_1.png"><img src="assets/images/p1_2.png"></figure>
+                      <figure><img src="{% static 'img/p1_1.png' %}"><img src="{% static 'img/p1_2.png' %}"></figure>
                   </div>
                     <ul class="ds-skills-list">
                         <li>Python</li>
@@ -150,7 +159,7 @@
                       </section>
                   </div>
                   <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5"><br>
-                      <figure><img src="assets/images/p2_1.png"><img src="assets/images/p2_2.png"></figure>
+                      <figure><img src="{% static 'img/p2_1.png' %}"><img src="{% static 'img/p2_2.png' %}"></figure>
                   </div>
                     <ul class="ds-skills-list">
                         <li>Python</li>
@@ -190,7 +199,7 @@
                       </section>
                   </div>
                   <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5"><br>
-                      <figure><img src="assets/images/p3_1.png"><img src="assets/images/p3_2.png"></figure>
+                      <figure><img src="{% static 'img/p3_1.png' %}"><img src="{% static 'img/p3_2.png' %}"></figure>
                   </div>
                     <ul class="ds-skills-list">
                         <li>Python</li>
@@ -230,8 +239,8 @@
                       </section>
                   </div>
                   <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5"><br>
-                      <figure><img src="assets/images/p4_1.png"></figure><br>
-                      <figure><img src="assets/images/p4_2.png"></figure>
+                      <figure><img src="{% static 'img/p4_1.png' %}"></figure><br>
+                      <figure><img src="{% static 'img/p4_2.png' %}"></figure>
                   </div>
                     <ul class="ds-skills-list">
                         <li>Python</li>
@@ -266,7 +275,7 @@
         <div class="row">
           <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
             <figure>
-              <img src="assets/images/profile-image.jpg">
+              <img src="{% static 'img/profile-image.jpg' %}">
             </figure>
           </div>
           <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
@@ -386,7 +395,7 @@
     <!--  Skills -->
 
     <div class="ds-button-sec text-center">
-        <a href="Алексей Крутиков python_dev.pdf" download="" class="ds-button">Скачать резюме</a>
+        <a href="{% static 'Алексей Крутиков python_dev.pdf' %}" download="" class="ds-button">Скачать резюме</a>
     </div>
 
     <!-- soft skills -->
@@ -404,10 +413,29 @@
             <p> Большую часть времени я работаю самостоятельно, сам веду бизнес. Понятно, что без таких
                 качеств как ответственность, умение достигать поставленных целей, коммуникабельность тут не обойтись.</p>
         </section>
+
+          <div class="alert alert-danger" role="alert" id="comment">
+            Оставьте комментарий!<br>
+            Если вы специалист, Recruter, HR - уделите пару минут, мне очень важно ваше мнение!
+            Что так или не так с моим резюме, сайтом. Чем вас не устраивает моя кандидатура.
+            Отзывы анонимные, напишите правду.
+
+              <!-- Форма для отправки текста сообщения -->
+                <form action="{% url 'save_mess' %}" method="post" id="form_save_mess">
+                    {% csrf_token %}
+                    <br>
+                    <textarea class="form_text" id="message" name="message"></textarea>
+                </form>
+                <div class="ds-button-sec text-center">
+                    <button class="ds-button" id="send">Отправить</button>
+                </div>
+
+
+          </div>
+
       </div>
     </div>
     <!-- soft skills -->
-
 
    <!-- Experience -->
     <!-- Experience -->
@@ -431,6 +459,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>

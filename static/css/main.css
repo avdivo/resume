@@ -172,3 +172,15 @@ span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-b
 
 
 }
+
+
+.form_text {
+    font-size: 15;
+    font-family: 'PF Centro Sans Pro', sans-serif;
+    width: 99%;
+    border: none;
+    margin-bottom: 20px;
+}
+textarea:focus {
+  outline: none;
+}

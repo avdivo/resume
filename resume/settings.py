@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'avdivo.ru', 'resume']
 
+CSRF_TRUSTED_ORIGINS = ['https://avdivo.ru']
 
 # Application definition
 

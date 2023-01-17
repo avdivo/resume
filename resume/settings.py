@@ -10,7 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
+import environ
 from pathlib import Path
+
+
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-k_!h$q=esrbt(t=yhdfclkp4o^q!w#xeq3sfm3%13jau=^sp87'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
+# Данные для Телеграмм
+CHAT_ID = os.environ.get('CHAT_ID')
+TBOT_TOKEN = os.environ.get('TBOT_TOKEN')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

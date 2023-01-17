@@ -5,4 +5,4 @@ def send_to_telegram(text):
     token = settings.TBOT_TOKEN
     bot = telebot.TeleBot(token)
     chat_id = settings.CHAT_ID
-    bot.send_message(chat_id, text)
+    bot.send_message(chat_id, 'AVDIVO: ' + text)

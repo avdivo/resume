@@ -7,6 +7,7 @@ from .utils import send_to_telegram
 
 def index(request):
     """ Вывод главной страницы """
+    send_to_telegram('Вход')  # Отправка сообщения в Телеграмм-бот
     return render(request, 'index.html', locals())
 
 

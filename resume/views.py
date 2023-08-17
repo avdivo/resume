@@ -3,11 +3,20 @@ from django.http import JsonResponse
 
 from .models import Message
 from .utils import send_to_telegram
+from user_agents import parse
 
 
 def index(request):
     """ Вывод главной страницы """
-    send_to_telegram('Вход')  # Отправка сообщения в Телеграмм-бот
+
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+
+    if not user_agent.is_bot:
+        msg = f'Вход с {user_agent.device.family} {user_agent.browser.family} {user_agent.os.family}'
+    else:
+        msg = f'Вход Бота'
+    send_to_telegram(msg)
+
     return render(request, 'index.html', locals())
 
 
